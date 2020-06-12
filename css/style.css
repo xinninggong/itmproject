@@ -127,9 +127,8 @@ td {
 
 #programmes {
 	/* background-color: yellow; */ 
-	width: 100%;
 	background-color: rgb(242, 242, 242);
-	height: 2000px;
+	height: 2100px;
 }
 
 #programmes article{
@@ -150,21 +149,31 @@ td {
 	display: inline-block;
 	text-align: center;
 	color: rgb(64, 64, 64);
-	border-bottom: 2px solid rgb(225, 225, 225);
+	text-align: left;
+	
 	/*border-left: 2px solid rgb(225, 225, 225);*/
 	
 }
 
 footer {
 	display: block;
-	background-color: blue;
+	background-color: rgb(102, 102, 102);
 	bottom: 10px;
+	width: 100%;
 }
 
 .hidden {
 	display: none;
 }
 
+a{
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #985d6a;
+}
 
 
 
