@@ -131,7 +131,6 @@ function displayProgrammes(programmes) {
 		programmeHTML.append(moreDescription);
 		
 		let readMore = $('<p id = "more' + i + '" class="more"> Read more </p>');
-		
 		programmeHTML.append(readMore);
 		
 		programmeHTML.append($("</article>"));
@@ -150,29 +149,25 @@ function displayProgrammes(programmes) {
 
 function displayMore() {
 	let moreItem = $(this);
-	let showMoreID = "show_" + moreItem.attr('id'); 
-	$('#' + showMoreID).show(); 
-	
-	/*let dots = $("#dots");
-	let moreText = $('#' + showMoreID);
 	let textElement = moreItem.attr('id');
+	let showMoreID = "show_" + textElement; 
+	$('#' + showMoreID).toggle(); 
+	let dots = $('#dots')
 	
-	if(dots.style.display === "none") {
-		dots.style.display = "inline"; 
-		textElement.innerHTML = "Read more";
-		moreText.style.display = "none"; 
+	if($('#' + textElement).text() == "Show less") {
+		$('#' + textElement).text("Read more");
+		dots.show();
 	} else {
-		dots.style.display = "none"; 
-		textElement.innerHTML = "Read less"; 
-		moreText.style.display = "inline";
-	} */
-	
-	
+		$('#' + textElement).text("Show less");
+		dots.hide();
+	}
 }
 
 $(document).ready(function(){
    displaySummary(programmes);
-  displayProgrammes(programmes) 
+   displayProgrammes(programmes);
+   $("#dots").show();
+   
 });
 
 
