@@ -6,7 +6,7 @@ const programmes = [
 	requirements: "Undergraduate", 
 	countries: "USA, Canada, France, Italy", 
 	description:"Looking for an overseas experience that fits during semester break? This is the perfect opportunity for you. With time and location flexibility, this exchange is fully customisable to individuals. Students in this programme will get a taste of the different school environment and life style overseas while studying at one of our partnered universities. It is possible to gain credit for some courses towardsyour current university programme. You will need to discuss this with your faculty and the university you choose.  ", 
-	review: "", 
+	review: "Going to Canada has always been my dream and being able to actually experience the wonderful culture and education system was life changing. The programme was really flexible and allowed me to pick courses and activities that I was interested in. The university was very different from my own and through this I was able to develop my work ethic. Aside from education, there was a few activities and events that Think Global had organised for me to attend which was really eye opening as the culture and food was so different.", 
 	images: "research.jpg", 
 	reviewImage: ""},
 	
@@ -17,7 +17,7 @@ const programmes = [
 	requirements: "Second year undergraduate and up", 
 	countries: "USA, Canada, France, South Korea, United Kingdom, Japan", 
 	description:"Immerse yourself in a whole new country, environment and education. Students in this programme will be able arranged to live with a local host family to develop respect, understanding and appreciation of their culture, beliefs and way of life. Students who attend this program will make life-long friends and learn about societies with a different culture, political and economic system. It is possible to gain credit for some courses towards your current university programme. You will need to discuss this with your university faculty as well as the university you choose. Monthly activities and events are organised by partners to ensure students are able to experience a balanced mix of education and culture.", 
-	review: "", 
+	review: "This programme was absolutely life changing for me. I have made wonderful connections with peers and my host family that will last for a life time. The university was very different from my own and through this I was able to develop my work ethic. My host family also regularly took me sightseeing and to local markets during the weekends where I was really able to explore the culture and food.", 
 	images: "building2.jpg", 
 	reviewImage: ""},
 	
@@ -28,7 +28,7 @@ const programmes = [
 	requirements:"Last year of undergraduate", 
 	countries:"Canada, France, Germany, Japan", 
 	description:"In your last year of undergrad and want work experience? This is the perfect programme for you. Many different internships are available during the semester break from engineering, accounting, law to med. Experience a different lifestyle while working towards your future career. We will work with you to ensure you are placed into an environment suitable to your needs and interests. Build connections and meet new friends. The world is your oyster. Scholarships are available to cover living costs and accomodation. Things to consider are visas, travel and language which we can help you sort out once you have applied. ", 
-	review: "", 
+	review: "This internship is why I got my dream job. I was struggling with what to do after completing my degree. However, Think Global was able to connect me to an amazing internship at one of the leading accounting firms over the summer break. I was able to put all the theory I had learnt into action while completing real-life tasks alongside senior employees. I was able to develop life long skills to benefit my career while also exploring a new country and all the culture and diversity.", 
 	images: "engineer.jpg", 
 	reviewImage: "" },
 	
@@ -39,7 +39,7 @@ const programmes = [
 	requirements:"Postgraduate", 
 	countries:"Canada, France, United Kingdom, USA", 
 	description:"Immerse yourself in a whole new country, environment and education. Students in this programme will need to have finished undergraduate in order to apply. We understand that it may be difficult to find the right time and course, hence, we have developed a very flexible and customisable programme to fit students needs. This programme has various durations and times vary depending on the country chosen. Short term research courses are available over semester breaks as well as full semester courses at various universities around the world. Students who attend this program will make life-long friends and learn about societies with a different culture, political and economic system. It is possible to gain credit for some courses towards your current university programme. You will need to discuss this with your university faculty as well as the university you choose.", 
-	review: "", 
+	review: "I highly recommend taking the opportunity to go overseas during your postgraduate degree. It has really helped open my eyes to the large diversity in the world and how wonderful other cultures are. I loved having the flexibility to customise an option which fits well into my degree. The research centres at the Australia National University were amazing and has influenced me to continue researching in my current field of study.", 
 	images: "postgrad.jpg", 
 	reviewImage:"" },
 	
@@ -50,7 +50,7 @@ const programmes = [
 	requirements:"Undergraduate", 
 	countries:"Thailand, Myanmar, South America, Africa", 
 	description:"Volunteering overseas gives the unique opportunity to experience local cultures first hand while making a difference to the world. Think Global has a large variety of volunteering options from teaching English, humantarian projects, animal rehabilitation and vetted organisations. See the real world from a different prespective, make new friends, learn new skills and embark on a journey of cultural and self discovery. Most volunteer options cover food and accomodation. You will also have time off each week to explore the world for yourself. ", 
-	review: "", 
+	review: "Volunteering was something that has been on my bucket list for a long time and was definitely worth doing. I got to meet amazing people and experience their culture, food and way of life. It really opened my eyes to how diverse people are. I especially enjoyed being able to care and feed the elephants every morning. This has been a life changing experience and has helped me develop myself.", 
 	images: "volunteer.jpg", 
 	reviewImage: ""} 
 ];
@@ -122,14 +122,22 @@ function displayProgrammes(programmes) {
 		let description = $("<p> Description: " + programmes[i].description + "</p>");
 		programmeHTML.append(description);
 		
-		programmeList.append(programmeHTML)
-		programmeList.append($("</article>"))
+		programmeHTML.append($("</article>"));
+		programmeList.append(programmeHTML);
+		
+		let programmeReview = $("<aside>");
+
+		let review = $("<p> Review: " + programmes[i].review + "</p>");
+		programmeReview.append(review);
+		programmeReview.append($("</aside>"));
+		programmeList.append(programmeReview);
 	}
-}
+} 
+
 
 $(document).ready(function(){
    displaySummary(programmes);
-   displayProgrammes(programmes)
+  displayProgrammes(programmes) 
 });
 
 

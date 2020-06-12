@@ -132,6 +132,26 @@ td {
 	
 }
 
+#programmes article{
+	float: left;
+	width: 60%;
+	margin: 0%;
+	display: inline-block;
+	padding-right: 2%;
+	background-color: green; 
+}
+
+#programmes aside {
+	float: right;
+	width: 35%;
+	padding-left: 2%;
+	display: inline-block;
+	/*background-color: green;  */ 
+	text-align: center;
+	/*border-left: 2px solid rgb(225, 225, 225);*/
+	background-color: purple;
+}
+
 footer {
 	display: block;
 	background-color: blue;
