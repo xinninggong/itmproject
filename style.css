@@ -6,11 +6,12 @@ html {
 }
 
 body { 
-	background-color: rgb(251, 252, 252);
+	background-color: rgb(242, 242, 242);
 	width: 100%;
 	margin: 1px auto;
 	height: 1000px;
 	font: 15px "Verdana", "Genera", sans-serif;
+	
 	
 }
 
@@ -29,6 +30,7 @@ header img {
 section {
 	padding: 10px;
 }
+
 h1 {
     position: absolute; 
     top: 55%; 
@@ -45,32 +47,84 @@ h2 {
 	font: bold 30px Helvetica, Sans-Serif; 
 }
 
-
-#statement {
-	float: left;
-	width: 75%; 
-	margin: 0%;
-	padding: 0; 
-	display: inline-block;
-	/* background-color: purple; */ 
+section.purpose {
+	background-color:rgb(242, 242, 242); ;
+	height: 380px;
+	/* border-bottom: 2px solid rgb(217, 217, 217); */
 	
 }
 
-#logo {
-	float: right;
-	width: 23%; 
+article.statement {
+	float: left;
+	width: 68%; 
+	margin: 0%;
+	display: inline-block;
+	padding-right: 2%;
+	
+	
+}
+
+aside.logo {
+	float: left;
+	width: 27%; 
 	padding-left: 2%;
 	display: inline-block;
-	/* background-color: green; */
+	/* background-color: green;  */ 
 	text-align: center;
-	
-	
+	height: 380px;
+	border-left: 2px solid rgb(225, 225, 225);
 }
 
-#logo img {
+.logo img  {
 	width: 80%;
 	margin: auto;
 	padding: 4px;
+}
+
+#summary{
+	display: block;
+	background-color: rgb(235, 235, 235);
+	margin: auto;
+	
+}
+
+#summary img {
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-ms-box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+table {
+    border-collapse: separate;
+    width: 90%;
+    margin: auto;
+    border-spacing: 20px;
+	padding: 5px;
+}
+
+td {
+    border: 2px solid rgb(204, 204, 204);
+    border-radius:12px;                    /* Browser prefixes to ensure rounded corners on all browsers */
+    -moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-ms-bored-radius: 12px;
+    padding: 8px 5px;
+    text-align: center;
+    width: 20%;
+    font-family: helvetica;
+    font-size:15px;
+}
+
+
+
+
+#programmes {
+	/* background-color: yellow; */ 
+	background-color: yellow;
+	width: 100%;
+	
 }
 
 footer {
@@ -78,3 +132,8 @@ footer {
 	background-color: blue;
 	bottom: 10px;
 }
+
+
+
+
+
