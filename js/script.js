@@ -201,7 +201,7 @@ function search() {
 		let programmeTitle = programme.name;
 		programmeTitle = programmeTitle.toLowerCase(); 
 		if(programmeTitle.includes(query)) {
-			matches.push(programmes);
+			matches.push(programme);
 		}
 	}
 	
