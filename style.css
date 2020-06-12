@@ -139,12 +139,14 @@ td {
 	display: inline-block;
 	padding-right: 2%;
 	background-color: green; 
+	border-bottom: 2px solid rgb(225, 225, 225);
 }
 
 #programmes aside {
-	float: right;
-	width: 35%;
-	padding-left: 2%;
+	float: left;
+	width: 33%;
+	padding: 2%;
+	margin-right: 2px;
 	display: inline-block;
 	/*background-color: green;  */ 
 	text-align: center;
@@ -158,6 +160,9 @@ footer {
 	bottom: 10px;
 }
 
+.hidden {
+	display: none;
+}
 
 
 
