@@ -2,7 +2,7 @@ const programmes = [
 	{name: "Summer exchange", 
 	duration: "1 - 3 months", 
 	time: "November", 
-	study: "Short university course", 
+	study: "Short course", 
 	requirements: "Undergraduate", 
 	countries: "USA, Canada, France, Italy", 
 	description:"Looking for an overseas experience that fits during semester break? This is the perfect opportunity for you. With time and location flexibility, this exchange is fully customisable to individuals. Students in this programme will get a taste of the different school environment and life style overseas while studying at one of our partnered universities. It is possible to gain credit for some courses towardsyour current university programme. You will need to discuss this with your faculty and the university you choose.  ", 
@@ -13,7 +13,7 @@ const programmes = [
 	{name: "Semester exchange", 
 	duration: "6 months", 
 	time: "March or July", 
-	study: "Full semester course", 
+	study: "Full semester", 
 	requirements: "Second year undergraduate and up", 
 	countries: "USA, Canada, France, South Korea, United Kingdom, Japan", 
 	description:"Immerse yourself in a whole new country, environment and education. Students in this programme will be able arranged to live with a local host family to develop respect, understanding and appreciation of their culture, beliefs and way of life. Students who attend this program will make life-long friends and learn about societies with a different culture, political and economic system. It is possible to gain credit for some courses towards your current university programme. You will need to discuss this with your university faculty as well as the university you choose. Monthly activities and events are organised by partners to ensure students are able to experience a balanced mix of education and culture.", 
@@ -32,7 +32,7 @@ const programmes = [
 	images: "engineer.jpg", 
 	reviewImage: "" },
 	
-	{name: "Postgraduate exchange", 
+	{name: "Postgraduate", 
 	duration: "1 - 6 months", 
 	time: "Various", 
 	study: "Short to full courses", 
@@ -80,10 +80,13 @@ function displaySummary(programmes) {    /*to display the summary section */
 		
 		let study = $("<p> Study: " + programmes[i].study + "</p>");
 		summaryHTML.append(study);
+		
+		let requirement =  $("<p> Requirements: " + programmes[i].requirements + "</p>");
+		summaryHTML.append(requirement);
     
-		/* if(i == 3) {
+		if(i == 3) {
 		    summaryList.append($("<tr>"));
-		} */ 
+		} 
 		
 		summaryList.append(summaryHTML);
 	}
@@ -91,8 +94,42 @@ function displaySummary(programmes) {    /*to display the summary section */
 	summaryList.append($("</table>"))
 }
 
+function displayProgrammes(programmes) {
+	let programmeList = $("#programmes");
+	programmeList.empty(); 
+	
+	for (let i = 0; i < programmes.length; i ++) {
+		let programmeHTML = $("<article>"); 
+		
+		let name = $("<h3>" + programmes[i].name + "</h3>"); 
+		programmeHTML.append(name); 
+		
+		let duration = $("<p> Duration: " + programmes[i].duration + "</p>");
+		programmeHTML.append(duration);
+		
+		let time = $("<p> Time: " + programmes[i].time + "</p>");
+		programmeHTML.append(time);
+		
+		let study = $("<p> Study: " + programmes[i].study + "</p>");
+		programmeHTML.append(study);
+		
+		let requirements = $("<p> Requirements: " + programmes[i].requirements + "</p>");
+		programmeHTML.append(requirements);
+		
+		let countries = $("<p> Countires: " + programmes[i].countries + "</p>");
+		programmeHTML.append(countries);
+		
+		let description = $("<p> Description: " + programmes[i].description + "</p>");
+		programmeHTML.append(description);
+		
+		programmeList.append(programmeHTML)
+		programmeList.append($("</article>"))
+	}
+}
+
 $(document).ready(function(){
    displaySummary(programmes);
+   displayProgrammes(programmes)
 });
 
 
