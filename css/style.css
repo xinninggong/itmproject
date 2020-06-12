@@ -127,9 +127,9 @@ td {
 
 #programmes {
 	/* background-color: yellow; */ 
-	background-color: yellow;
 	width: 100%;
-	
+	background-color: rgb(242, 242, 242);
+	height: 2000px;
 }
 
 #programmes article{
@@ -138,8 +138,8 @@ td {
 	margin: 0%;
 	display: inline-block;
 	padding-right: 2%;
-	background-color: green; 
 	border-bottom: 2px solid rgb(225, 225, 225);
+	
 }
 
 #programmes aside {
@@ -148,10 +148,11 @@ td {
 	padding: 2%;
 	margin-right: 2px;
 	display: inline-block;
-	/*background-color: green;  */ 
 	text-align: center;
+	color: rgb(64, 64, 64);
+	border-bottom: 2px solid rgb(225, 225, 225);
 	/*border-left: 2px solid rgb(225, 225, 225);*/
-	background-color: purple;
+	
 }
 
 footer {

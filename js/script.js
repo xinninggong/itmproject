@@ -130,7 +130,7 @@ function displayProgrammes(programmes) {
 		let moreDescription = $('<span  id="show_more' + i + '" class = "hidden">' + programmes[i].description.split("...")[1] + "</span> </p>");
 		programmeHTML.append(moreDescription);
 		
-		let readMore = $('<p id = "more' + i + '" class="more"> Read more </p>');
+		let readMore = $('<p id = "more' + i + '" class="more">read more</p>');
 		programmeHTML.append(readMore);
 		
 		programmeHTML.append($("</article>"));
@@ -153,13 +153,16 @@ function displayMore() {
 	let textElement = moreItem.attr('id');
 	let showMoreID = "show_" + textElement; 
 	$('#' + showMoreID).show(); 
-	$('#' + textElement).text("show less"); 
 	
-	/*if ($('#' + textElement).text() == "Show less") {
+	/* $('#' + textElement).text("Show less"); */
+	
+	if ($('#' + textElement).text() == "show less") {
 		$('#' + textElement).text("Read more");
+		$('#' + showMoreID).hide(); 
 	} else {
-		$('#' + textElement).text("Show less");
-	}*/
+		$('#' + textElement).text("show less");
+		$('#' + showMoreID).show(); 
+	}
 	
 	/*
 	if($('#' + textElement).text() == "Show less") {
